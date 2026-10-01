@@ -1,0 +1,198 @@
+/* GradeMaster Custom Styles */
+
+/* Scale Button Active Styles */
+.active-scale {
+  background-color: #4f46e5 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35);
+}
+
+/* Light Mode Overrides */
+html:not(.dark) body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+html:not(.dark) header {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-color: #e2e8f0;
+}
+
+html:not(.dark) header h1 {
+  color: #0f172a;
+}
+
+html:not(.dark) .scale-btn.active-scale {
+  background-color: #4f46e5 !important;
+  color: #ffffff !important;
+}
+
+html:not(.dark) .scale-btn:not(.active-scale) {
+  color: #64748b;
+}
+
+html:not(.dark) .scale-btn:not(.active-scale):hover {
+  color: #0f172a;
+}
+
+html:not(.dark) .action-btn {
+  background-color: #ffffff;
+  border-color: #e2e8f0;
+  color: #334155;
+}
+
+html:not(.dark) .action-btn:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+html:not(.dark) .bg-slate-800\/40,
+html:not(.dark) .bg-slate-800\/50,
+html:not(.dark) .bg-slate-800\/70,
+html:not(.dark) .bg-slate-800\/80,
+html:not(.dark) .bg-slate-800\/90,
+html:not(.dark) .bg-slate-800 {
+  background-color: #ffffff;
+  border-color: #e2e8f0;
+}
+
+html:not(.dark) .bg-slate-900\/40,
+html:not(.dark) .bg-slate-900\/60,
+html:not(.dark) .bg-slate-900\/70,
+html:not(.dark) .bg-slate-900 {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+html:not(.dark) .text-white {
+  color: #0f172a !important;
+}
+
+html:not(.dark) .text-slate-400 {
+  color: #64748b !important;
+}
+
+html:not(.dark) .text-slate-300 {
+  color: #475569 !important;
+}
+
+html:not(.dark) .border-slate-800,
+html:not(.dark) .border-slate-700,
+html:not(.dark) .border-slate-700\/60,
+html:not(.dark) .border-slate-700\/70,
+html:not(.dark) .border-slate-700\/80 {
+  border-color: #e2e8f0 !important;
+}
+
+html:not(.dark) input,
+html:not(.dark) select {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+html:not(.dark) #custom-scale-modal .bg-slate-900 {
+  background-color: #ffffff !important;
+}
+
+/* Animations */
+@keyframes slideDownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.semester-card {
+  animation: slideDownFade 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transition: all 0.2s ease;
+}
+
+.course-row {
+  animation: slideDownFade 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.2);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.4);
+}
+
+/* Print / PDF Export Styles */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt;
+  }
+
+  header,
+  #add-semester-btn,
+  #add-semester-top-btn,
+  #collapse-all-btn,
+  .action-btn,
+  #theme-toggle,
+  #reset-all-btn,
+  .btn-remove-semester,
+  .btn-add-course,
+  .btn-remove-course,
+  #target-cgpa-card,
+  .no-print {
+    display: none !important;
+  }
+
+  #print-header {
+    display: block !important;
+  }
+
+  .lg\:col-span-8 {
+    width: 100% !important;
+  }
+
+  .lg\:col-span-4 {
+    display: none !important;
+  }
+
+  .semester-card {
+    break-inside: avoid;
+    box-shadow: none !important;
+    border: 1px solid #cbd5e1 !important;
+    margin-bottom: 20px !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  input, select {
+    border: none !important;
+    background: transparent !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  .text-white {
+    color: #000000 !important;
+  }
+
+  .text-slate-400, .text-slate-300 {
+    color: #475569 !important;
+  }
+}
